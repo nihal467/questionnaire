@@ -1,0 +1,1048 @@
+{
+  "id": "033bd161-0e97-4b53-b1a9-9a8edd2db87e",
+  "slug": "community_nurse_form",
+  "version": "",
+  "title": "Community Nurse Homecare Form",
+  "description": "A questionnaire for community nurse to assess patient mobility, symptoms, diagnosis, and other health parameters.",
+  "status": "active",
+  "subject_type": "encounter",
+  "styling_metadata": {},
+  "questions": [
+    {
+      "id": "bbf29c10-589b-4858-bbca-cb7bec9373a8",
+      "text": "Team",
+      "type": "text",
+      "link_id": "1",
+      "required": true
+    },
+    {
+      "id": "1ff64ed5-4011-4116-9b1b-0a5a830d6529",
+      "text": "Visit Duration",
+      "type": "choice",
+      "link_id": "29",
+      "required": true,
+      "answer_option": [
+        {
+          "value": "LESS_THAN_15_MIN"
+        },
+        {
+          "value": "LESS_THAN_30_MIN"
+        },
+        {
+          "value": "LESS_THAN_1_HOUR"
+        },
+        {
+          "value": "LESS_THAN_1.5_HOURS"
+        },
+        {
+          "value": "LESS_THAN_2_HOURS"
+        },
+        {
+          "value": "LESS_THAN_2.5_HOURS"
+        },
+        {
+          "value": "LESS_THAN_3_HOURS"
+        },
+        {
+          "value": "MORE_THAN_3_HOURS"
+        }
+      ]
+    },
+    {
+      "id": "d0c01efe-2fd6-420b-9de0-f01018346fa8",
+      "text": "Mobility",
+      "type": "choice",
+      "link_id": "3",
+      "required": true,
+      "answer_option": [
+        {
+          "value": "BED_BOUND_CANNOT_MOVE"
+        },
+        {
+          "value": "BED_BOUND_TURN_WITH_HELP"
+        },
+        {
+          "value": "BED_BOUND_TURN_BY_SELF"
+        },
+        {
+          "value": "BED_BOUND_HELP_TO_SIT"
+        },
+        {
+          "value": "BED_BOUND_SIT_WITHOUT_HELP"
+        },
+        {
+          "value": "BED_BOUND_HELP_TO_STAND"
+        },
+        {
+          "value": "HOME_BOUND_SUPPORT_TO_WALK"
+        },
+        {
+          "value": "HOME_BOUND_NO_SUPPORT_INSIDE"
+        },
+        {
+          "value": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "5791c72a-1528-4b38-994b-1cc12fb97f10",
+      "text": "Symptoms",
+      "type": "structured",
+      "link_id": "4",
+      "required": false,
+      "structured_type": "symptom"
+    },
+    {
+      "id": "304521ce-ab69-4c9c-bd88-bf6369a6cbb6",
+      "text": "Diagnosis",
+      "type": "structured",
+      "link_id": "5",
+      "required": true,
+      "structured_type": "diagnosis"
+    },
+    {
+      "id": "e07591dd-3076-448f-93fb-555a3e71d16e",
+      "text": "Sleep",
+      "type": "choice",
+      "link_id": "6",
+      "required": true,
+      "answer_option": [
+        {
+          "value": "EXCESSIVE"
+        },
+        {
+          "value": "SATISFACTORY"
+        },
+        {
+          "value": "UNSATISFACTORY"
+        },
+        {
+          "value": "NO_SLEEP"
+        }
+      ]
+    },
+    {
+      "id": "d0d1b592-c808-462d-99ec-70d948e1ce74",
+      "text": "Bowel",
+      "type": "group",
+      "link_id": "7",
+      "required": true,
+      "questions": [
+        {
+          "id": "1703c805-6759-4bcd-8227-8776c63e6f86",
+          "text": "Route",
+          "type": "choice",
+          "link_id": "7.1",
+          "answer_option": [
+            {
+              "value": "ANAL_CANAL"
+            },
+            {
+              "value": "ARTIFICIAL_STOMA"
+            }
+          ]
+        },
+        {
+          "id": "14606dbe-5621-4abb-9a75-0482464d0014",
+          "text": "Issues",
+          "type": "choice",
+          "link_id": "7.2",
+          "answer_option": [
+            {
+              "value": "NO_DIFFICULTY"
+            },
+            {
+              "value": "DIFFICULTY_LESS_THAN_2_DAYS"
+            },
+            {
+              "value": "CONSTIPATION"
+            },
+            {
+              "value": "DIARRHEA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ee590852-eefa-4a43-8670-364cac4ef93d",
+      "text": "Bladder",
+      "type": "group",
+      "link_id": "8",
+      "required": true,
+      "questions": [
+        {
+          "id": "c64442b0-1f87-4f78-ad9c-32855791c8d9",
+          "code": {
+            "code": "72291-8",
+            "system": "http://loinc.org",
+            "display": "Drainage amount from device of Exudate from wound"
+          },
+          "text": "Drainage Issues",
+          "type": "choice",
+          "link_id": "8.1",
+          "answer_option": [
+            {
+              "value": "NO_ISSUES"
+            },
+            {
+              "value": "RETENTION"
+            },
+            {
+              "value": "INCONTINENCE"
+            }
+          ]
+        },
+        {
+          "id": "07d1dd80-3d5c-46e6-bf19-85bb03766474",
+          "text": "Type of Drainage",
+          "type": "choice",
+          "link_id": "8.2",
+          "answer_option": [
+            {
+              "value": "NORMAL"
+            },
+            {
+              "value": "DIAPER"
+            },
+            {
+              "value": "URINAL/COMMODE"
+            },
+            {
+              "value": "Condom Catheter"
+            },
+            {
+              "value": "Indwelling catheter usage"
+            },
+            {
+              "value": "Urostomy"
+            }
+          ]
+        },
+        {
+          "id": "23f61414-5613-43f3-a61f-b0cc56ec93bd",
+          "text": "Issues",
+          "type": "choice",
+          "link_id": "8.2.1",
+          "enable_when": [
+            {
+              "answer": "Indwelling catheter usage",
+              "operator": "not_equals",
+              "question": "8.2"
+            }
+          ],
+          "answer_option": [
+            {
+              "value": "NO_ISSUES"
+            },
+            {
+              "value": "DYSURIA"
+            },
+            {
+              "value": "INCREASED_FREQUENCY"
+            },
+            {
+              "value": "DECREASED_FREQUENCY"
+            },
+            {
+              "value": "SKIN_ULCERATION"
+            },
+            {
+              "value": "BLOCK"
+            }
+          ]
+        },
+        {
+          "id": "97d4e50b-c999-4afa-a920-f6cfe6e67e90",
+          "code": {
+            "code": "45628-5",
+            "system": "http://loinc.org",
+            "display": "Indwelling catheter [Minimum Data Set]"
+          },
+          "text": "Indwelling Catheter Details",
+          "type": "group",
+          "link_id": "8.2.2",
+          "questions": [
+            {
+              "id": "d66adbd3-2df5-4799-a702-6b4c2d21c482",
+              "code": {
+                "code": "LL5541-9 ",
+                "system": "http://loinc.org",
+                "display": "Catheter type"
+              },
+              "text": "Type",
+              "type": "choice",
+              "link_id": "8.2.3",
+              "answer_option": [
+                {
+                  "value": "INTERMITTENT"
+                },
+                {
+                  "value": "CONTINUOUS"
+                },
+                {
+                  "value": "SUPRAPUBIC"
+                }
+              ]
+            },
+            {
+              "id": "6e7b0f67-d295-4030-9322-83fc0def3023",
+              "text": "Material",
+              "type": "choice",
+              "link_id": "8.2.4",
+              "enable_when": [
+                {
+                  "answer": "CONTINUOUS",
+                  "operator": "equals",
+                  "question": "8.2.3"
+                },
+                {
+                  "answer": "SUPRAPUBIC",
+                  "operator": "equals",
+                  "question": "8.2.3"
+                }
+              ],
+              "answer_option": [
+                {
+                  "value": "SILICONE"
+                },
+                {
+                  "value": "LATEX"
+                }
+              ],
+              "enable_behavior": "any"
+            },
+            {
+              "id": "4c28bb68-8c60-4a69-8c27-3610c8ff93fc",
+              "text": "Issues",
+              "type": "choice",
+              "link_id": "8.2.5",
+              "answer_option": [
+                {
+                  "value": "NORMAL_DRAINAGE"
+                },
+                {
+                  "value": "LEAKAGE"
+                },
+                {
+                  "value": "BLOCK"
+                }
+              ]
+            },
+            {
+              "id": "73795da1-c744-492e-81ca-9830c9466206",
+              "text": "Size",
+              "type": "choice",
+              "link_id": "8.2.6",
+              "answer_option": [
+                {
+                  "value": "12F"
+                },
+                {
+                  "value": "14F"
+                },
+                {
+                  "value": "16F"
+                },
+                {
+                  "value": "18F"
+                },
+                {
+                  "value": "20F"
+                },
+                {
+                  "value": "22F"
+                }
+              ]
+            }
+          ],
+          "enable_when": [
+            {
+              "answer": "Indwelling catheter usage",
+              "operator": "equals",
+              "question": "8.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f5e78ca6-7095-4e03-8414-6c98770a471d",
+      "code": {
+        "code": "\t75303-8",
+        "system": "http://loinc.org",
+        "display": "Nutrition assessment Narrative"
+      },
+      "text": "Nutrition",
+      "type": "group",
+      "link_id": "33",
+      "required": true,
+      "questions": [
+        {
+          "id": "ef9a3791-843c-4d24-b3fc-edcf365524b6",
+          "code": {
+            "code": "80453-4",
+            "system": "http://loinc.org",
+            "display": "Food intake panel"
+          },
+          "text": "Nutrition Route",
+          "type": "choice",
+          "link_id": "4.1",
+          "required": false,
+          "answer_option": [
+            {
+              "value": "ORAL"
+            },
+            {
+              "value": "RYLES_TUBE"
+            },
+            {
+              "value": "GASTROSTOMY_OR_JEJUNOSTOMY"
+            },
+            {
+              "value": "PEG"
+            },
+            {
+              "value": "PARENTERAL_TUBING_FLUID"
+            },
+            {
+              "value": "PARENTERAL_TUBING_TPN"
+            }
+          ]
+        },
+        {
+          "id": "7f0d8067-3f23-46cc-a3f7-e722b572a597",
+          "code": {
+            "code": "\t65972-2",
+            "system": "http://loinc.org",
+            "display": "Appetite or sleep change notes [Text] [DI-PAD]"
+          },
+          "text": "Appetite",
+          "type": "choice",
+          "link_id": "4.3",
+          "required": false,
+          "answer_option": [
+            {
+              "value": "INCREASED"
+            },
+            {
+              "value": "SATISFACTORY"
+            },
+            {
+              "value": "REDUCED"
+            },
+            {
+              "value": "NO_TASTE_FOR_FOOD"
+            },
+            {
+              "value": "CANNOT_BE_ASSESSED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24bf9b18-10e6-464d-8d08-6c45188f7cfa",
+      "text": "Vitals",
+      "type": "group",
+      "link_id": "11",
+      "questions": [
+        {
+          "id": "1b378294-1095-4ccf-a7b1-15f5a7674b64",
+          "code": {
+            "code": "LP40259-1",
+            "system": "http://loinc.org",
+            "display": "Blood pressure"
+          },
+          "text": "Blood Pressure",
+          "type": "group",
+          "link_id": "11.1",
+          "questions": [
+            {
+              "id": "3489b2a9-8936-482a-b167-c2799e7139e5",
+              "code": {
+                "code": "8480-6",
+                "system": "http://loinc.org",
+                "display": "Systolic blood pressure"
+              },
+              "text": "Systolic Blood Pressure",
+              "type": "decimal",
+              "unit": {
+                "code": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "display": "millimeter of mercury"
+              },
+              "link_id": "11.1.1",
+              "required": false
+            },
+            {
+              "id": "5a66a883-78ed-434c-b310-0916285976df",
+              "code": {
+                "code": "8462-4",
+                "system": "http://loinc.org",
+                "display": "Diastolic blood pressure"
+              },
+              "text": "Diastolic Blood Pressure",
+              "type": "decimal",
+              "unit": {
+                "code": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "display": "millimeter of mercury"
+              },
+              "link_id": "11.1.2",
+              "required": false
+            }
+          ],
+          "styling_metadata": {
+            "classes": "col-span-all",
+            "containerClasses": "grid-2-col"
+          }
+        },
+        {
+          "id": "78c2edea-17e5-426e-adaf-e815467e7416",
+          "code": {
+            "code": "8867-4",
+            "system": "http://loinc.org",
+            "display": "Heart rate"
+          },
+          "text": "Pulse",
+          "type": "decimal",
+          "unit": {
+            "code": "{Beats}/min",
+            "system": "http://unitsofmeasure.org",
+            "display": "Beats / minute"
+          },
+          "link_id": "11.2"
+        },
+        {
+          "id": "dbf0ffd0-8656-4cf3-8cfb-0972b515dc30",
+          "code": {
+            "code": "2708-6",
+            "system": "http://loinc.org",
+            "display": "Oxygen saturation in Arterial blood"
+          },
+          "text": "SpO2",
+          "type": "decimal",
+          "unit": {
+            "code": "%",
+            "system": "http://unitsofmeasure.org",
+            "display": "percent"
+          },
+          "link_id": "11.3"
+        },
+        {
+          "id": "2e7fecf0-67f8-421b-b358-2635c6575a92",
+          "code": {
+            "code": "2339-0",
+            "system": "http://loinc.org",
+            "display": "Blood Glucose"
+          },
+          "text": "Blood Sugar Level",
+          "type": "decimal",
+          "unit": {
+            "code": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "display": "milligram per deciliter"
+          },
+          "link_id": "11.4"
+        },
+        {
+          "id": "4774843c-2de6-412c-9c07-cee435aa122f",
+          "code": {
+            "code": " 80316-3",
+            "system": "http://loinc.org",
+            "display": "Pain scale [Type]"
+          },
+          "text": "Pain",
+          "type": "choice",
+          "link_id": "11.5",
+          "answer_option": [
+            {
+              "value": "NO_PAIN"
+            },
+            {
+              "value": "MILD"
+            },
+            {
+              "value": "MODERATE"
+            },
+            {
+              "value": "SEVERE"
+            }
+          ]
+        }
+      ],
+      "styling_metadata": {
+        "containerClasses": "grid-2-col"
+      }
+    },
+    {
+      "id": "73b238ed-c9c2-4811-885d-486e1127b12d",
+      "text": "Ongoing Medication",
+      "type": "structured",
+      "link_id": "12",
+      "description": "List ongoing medications using FHIR MedicationRequest format.",
+      "structured_type": "medication_statement"
+    },
+    {
+      "id": "c648d2b5-9439-411a-aa70-86a46c427ef8",
+      "text": "Nursing Care",
+      "type": "choice",
+      "link_id": "16",
+      "repeats": true,
+      "required": true,
+      "answer_option": [
+        {
+          "value": "ORAL_CARE"
+        },
+        {
+          "value": "HAIR_CARE"
+        },
+        {
+          "value": "BED_BATH"
+        },
+        {
+          "value": "EYE_CARE"
+        },
+        {
+          "value": "PERINEAL_CARE"
+        },
+        {
+          "value": "SKIN_CARE"
+        },
+        {
+          "value": "PRE_ENEMA"
+        },
+        {
+          "value": "WOUND_DRESSING"
+        },
+        {
+          "value": "LYMPHEDEMA_CARE"
+        },
+        {
+          "value": "ASCITIC_TAPPING"
+        },
+        {
+          "value": "COLOSTOMY_CARE"
+        },
+        {
+          "value": "COLOSTOMY_CHANGE"
+        },
+        {
+          "value": "OTHER_HYGIENE"
+        },
+        {
+          "value": "POSITIONING"
+        },
+        {
+          "value": "SUCTIONING"
+        },
+        {
+          "value": "RYLES_TUBE_CARE"
+        },
+        {
+          "value": "RYLES_TUBE_CHANGE"
+        },
+        {
+          "value": "IV_SITE_CARE"
+        },
+        {
+          "value": "NEBULISATION"
+        },
+        {
+          "value": "DRESSING"
+        },
+        {
+          "value": "DVT_PUMP_STOCKING"
+        },
+        {
+          "value": "RESTRAIN"
+        },
+        {
+          "value": "CHEST_TUBE_CARE"
+        },
+        {
+          "value": "TRACHEOSTOMY_CARE"
+        },
+        {
+          "value": "TRACHEOSTOMY_TUBE_CHANGE"
+        },
+        {
+          "value": "STOMA_CARE"
+        },
+        {
+          "value": "CATHETER_CARE"
+        },
+        {
+          "value": "CATHETER_CHANGE"
+        },
+        {
+          "value": "SHOWER_BATH"
+        },
+        {
+          "value": "EAR_CARE"
+        },
+        {
+          "value": "NAIL_CARE"
+        },
+        {
+          "value": "NASAL_CARE"
+        },
+        {
+          "value": "URO_CONDOM_CARE"
+        },
+        {
+          "value": "CATHETER_CHECK"
+        },
+        {
+          "value": "UROBAG_CHANGE"
+        },
+        {
+          "value": "CATHETER_REMOVAL"
+        },
+        {
+          "value": "BLADDER_WASH"
+        },
+        {
+          "value": "RT_CHECK"
+        },
+        {
+          "value": "EXTERNAL_FEEDING"
+        },
+        {
+          "value": "ORAL_FEEDING"
+        },
+        {
+          "value": "INJECTIONS"
+        },
+        {
+          "value": "INFUSIONS"
+        },
+        {
+          "value": "IVF_INJECTION_INFERTILITY"
+        },
+        {
+          "value": "CANNULA_REMOVAL"
+        },
+        {
+          "value": "CANNULA_INSERTION"
+        },
+        {
+          "value": "DEATH_CARE"
+        },
+        {
+          "value": "SUTURING"
+        },
+        {
+          "value": "SUTURE_REMOVAL"
+        },
+        {
+          "value": "HEAD_TO_FOOT_EXAMINATION"
+        },
+        {
+          "value": "NO_CARE"
+        }
+      ]
+    },
+    {
+      "id": "4c5fbecc-24b1-4a51-be94-d2674e9bee36",
+      "text": "Comfort/Assistive Devices",
+      "type": "choice",
+      "link_id": "24",
+      "repeats": true,
+      "required": true,
+      "answer_option": [
+        {
+          "value": "HOSPITAL_BED"
+        },
+        {
+          "value": "AIR_BED"
+        },
+        {
+          "value": "WATER_BED"
+        },
+        {
+          "value": "BACKREST"
+        },
+        {
+          "value": "SIDE_RAIL"
+        },
+        {
+          "value": "AIR_CUSHION"
+        },
+        {
+          "value": "GEL_CUSHION"
+        },
+        {
+          "value": "CARDIAC_TABLE"
+        },
+        {
+          "value": "SAND_BAG"
+        },
+        {
+          "value": "CERVICAL_PILLOW"
+        },
+        {
+          "value": "HOT_WATER_BAG"
+        },
+        {
+          "value": "BED_BLOCK"
+        },
+        {
+          "value": "OXYGEN_CYLINDER"
+        },
+        {
+          "value": "CONCENTRATOR"
+        },
+        {
+          "value": "C_PAP_MACHINE"
+        },
+        {
+          "value": "BIPAP_MACHINE"
+        },
+        {
+          "value": "OXYGEN_FLOW_METER_WITH_HUMIDIFIER"
+        },
+        {
+          "value": "NRBM_MASK"
+        },
+        {
+          "value": "NEBULIZER"
+        },
+        {
+          "value": "INHALER"
+        },
+        {
+          "value": "ROTAHALER"
+        },
+        {
+          "value": "SPACER"
+        },
+        {
+          "value": "O2_MASK"
+        },
+        {
+          "value": "NASAL_CANNULA"
+        },
+        {
+          "value": "SPIROMETER"
+        },
+        {
+          "value": "HANDHELD_FAN"
+        },
+        {
+          "value": "STATIC_COMMODE_CHAIR"
+        },
+        {
+          "value": "FOLDING_COMMODE_CHAIR"
+        },
+        {
+          "value": "WHEELED_COMMODE_CHAIR"
+        },
+        {
+          "value": "HANDLE_DETACHABLE_COMMODE_CHAIR"
+        },
+        {
+          "value": "TOILET_FRAME_WITH_SEAT"
+        },
+        {
+          "value": "STANDARD_WALKER"
+        },
+        {
+          "value": "FOLDING_WALKER"
+        },
+        {
+          "value": "TWO_WHEEL_WALKER"
+        },
+        {
+          "value": "FOUR_WHEEL_WALKER"
+        },
+        {
+          "value": "ELBOW_CRUTCHES"
+        },
+        {
+          "value": "AXILLARY_CRUTCHES"
+        },
+        {
+          "value": "ADJUSTABLE_WALKING_STICK"
+        },
+        {
+          "value": "FOLDING_WALKING_STICK"
+        },
+        {
+          "value": "QUAD_CANE"
+        },
+        {
+          "value": "TRIPOD_CANE"
+        },
+        {
+          "value": "T_HANDLE_WALKING_STICK"
+        },
+        {
+          "value": "NOT_APPLICABLE"
+        }
+      ]
+    },
+    {
+      "id": "2d06d979-96c2-4a5c-ae01-128d7b4d1d90",
+      "text": "Care Plan",
+      "type": "group",
+      "link_id": "15",
+      "required": true,
+      "questions": [
+        {
+          "id": "421c511c-fb75-43f4-aedd-3da3d069e155",
+          "text": "Care needed for the patient",
+          "type": "text",
+          "link_id": "15.1",
+          "description": "Provide detailed care needed for the patient."
+        },
+        {
+          "id": "2f5f2c02-d096-4de9-b100-73c57a04736a",
+          "text": "Frequency of Follow-Up Required",
+          "type": "choice",
+          "link_id": "15.2",
+          "answer_option": [
+            {
+              "value": "CONTINUOUS_CAREGIVER_SUPPORT"
+            },
+            {
+              "value": "8TH_HOURLY_CARE"
+            },
+            {
+              "value": "TWICE_DAILY"
+            },
+            {
+              "value": "DAILY"
+            },
+            {
+              "value": "ALTERNATE_DAYS"
+            },
+            {
+              "value": "TWICE_IN_A_WEEK"
+            },
+            {
+              "value": "WEEKLY"
+            },
+            {
+              "value": "TWO_WEEKLY"
+            },
+            {
+              "value": "MONTHLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46f97a4d-4135-4d2c-a0c1-93be52e2c049",
+      "text": "Next Visit Plan",
+      "type": "structured",
+      "link_id": "22",
+      "required": true,
+      "structured_type": "appointment"
+    },
+    {
+      "id": "af8d142e-eeaa-454e-b00e-5b43cc8175ee",
+      "text": "Tele Consult",
+      "type": "group",
+      "link_id": "25",
+      "required": true,
+      "questions": [
+        {
+          "id": "0d460a95-439d-45f8-8e1f-d1d4a7ebc7ff",
+          "text": "Do you want to enable Tele Consult?",
+          "type": "choice",
+          "link_id": "21.1",
+          "answer_option": [
+            {
+              "value": "YES"
+            },
+            {
+              "value": "NO"
+            }
+          ]
+        },
+        {
+          "id": "1cdfc756-90ba-4e6b-a307-0e42051cf54e",
+          "text": "Name of Doctor",
+          "type": "text",
+          "link_id": "21.2",
+          "enable_when": [
+            {
+              "answer": "YES",
+              "operator": "equals",
+              "question": "21.1"
+            }
+          ]
+        },
+        {
+          "id": "ae341976-79ba-4ad0-875d-f813cec19ddf",
+          "text": "Discussion",
+          "type": "text",
+          "link_id": "21.3",
+          "enable_when": [
+            {
+              "answer": "YES",
+              "operator": "equals",
+              "question": "21.1"
+            }
+          ]
+        },
+        {
+          "id": "85f9c1ba-535c-44c6-b076-abda6d156f2d",
+          "text": "Advice Medicine",
+          "type": "structured",
+          "link_id": "21.4",
+          "enable_when": [
+            {
+              "answer": "YES",
+              "operator": "equals",
+              "question": "21.1"
+            }
+          ],
+          "structured_type": "medication_request"
+        }
+      ]
+    }
+  ],
+  "created_by": {
+    "meta": {},
+    "id": "ad4f0195-cc3d-4e24-aa25-b3b0e74d56ee",
+    "first_name": "Care",
+    "last_name": "Admin",
+    "phone_number": "+919696969696",
+    "prefix": null,
+    "suffix": null,
+    "last_login": "2025-05-22T11:21:19.258986Z",
+    "profile_picture_url": null,
+    "user_type": "40",
+    "gender": "3",
+    "username": "careadmin",
+    "mfa_enabled": false,
+    "deleted": false
+  },
+  "updated_by": {
+    "meta": {},
+    "id": "ad4f0195-cc3d-4e24-aa25-b3b0e74d56ee",
+    "first_name": "Care",
+    "last_name": "Admin",
+    "phone_number": "+919696969696",
+    "prefix": null,
+    "suffix": null,
+    "last_login": "2025-05-22T11:21:19.258986Z",
+    "profile_picture_url": null,
+    "user_type": "40",
+    "gender": "3",
+    "username": "careadmin",
+    "mfa_enabled": false,
+    "deleted": false
+  },
+  "tags": [
+    {
+      "id": "3382f176-eb16-44af-b26d-2582d57bc7c8",
+      "name": "Encounter Actions",
+      "slug": "encounter_actions"
+    }
+  ]
+}
