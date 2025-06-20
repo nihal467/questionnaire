@@ -1,0 +1,318 @@
+{
+  "title": "Master Questionnaire",
+  "slug": "master-questionnaire",
+  "description": "",
+  "questions": [
+    {
+      "id": "23489ae8-fb04-4474-849c-50500b7fab56",
+      "text": "the date and time of encounter been recorded",
+      "type": "dateTime",
+      "link_id": "Q-1750334193911",
+      "required": true
+    },
+    {
+      "id": "a66a38a5-c62b-49aa-a1a4-44098396aeee",
+      "text": "Does the patient shows have any medication information",
+      "type": "boolean",
+      "link_id": "Q-1750328670426"
+    },
+    {
+      "id": "adc6efb2-0c64-47fb-b3bc-44c947036b9f",
+      "text": "Medication Diagnosis",
+      "type": "group",
+      "link_id": "Q-1750328887909",
+      "questions": [
+        {
+          "id": "3afbbc89-fcb9-417d-b177-b012a88fe1ce",
+          "text": "Medication Prescribed (Request)",
+          "type": "structured",
+          "link_id": "Q-1750329455223",
+          "structured_type": "medication_request"
+        },
+        {
+          "id": "59fce5bd-b5a4-42e9-b8c7-6e12758534a4",
+          "text": "Medication Statement (History)",
+          "type": "structured",
+          "link_id": "Q-1750329976033",
+          "structured_type": "medication_statement"
+        }
+      ],
+      "enable_when": [
+        {
+          "answer": "Yes",
+          "operator": "equals",
+          "question": "Q-1750328670426"
+        }
+      ]
+    },
+    {
+      "id": "03c49b6c-25d4-4b28-ad41-10981b8b587f",
+      "text": "Why the patient doesn't have any medical reason",
+      "type": "string",
+      "link_id": "Q-1750330258352",
+      "enable_when": [
+        {
+          "answer": "No",
+          "operator": "equals",
+          "question": "Q-1750328670426"
+        },
+        {
+          "answer": "Yes",
+          "operator": "not_equals",
+          "question": "Q-1750328670426"
+        }
+      ]
+    },
+    {
+      "id": "cd6249b6-a8d1-4cde-b046-4e8a9fef0b12",
+      "text": "Expected date for the medication history to be filled",
+      "type": "integer",
+      "link_id": "Q-1750333368646",
+      "enable_when": [
+        {
+          "answer": true,
+          "operator": "exists",
+          "question": "Q-1750330258352"
+        }
+      ]
+    },
+    {
+      "id": "7aebc350-eb2a-4c93-bae2-75971a5d7305",
+      "text": "what is the profession of the patient",
+      "type": "choice",
+      "link_id": "Q-1750334310662",
+      "answer_option": [
+        {
+          "value": "Professional"
+        },
+        {
+          "value": "Unskilled labour"
+        },
+        {
+          "value": "Skilled labour"
+        },
+        {
+          "value": "Other"
+        }
+      ]
+    },
+    {
+      "id": "a4acfd07-74a5-4c71-af9f-1c28e1859cc8",
+      "text": "What is the other profession of the patient",
+      "type": "choice",
+      "link_id": "Q-1750334914724",
+      "enable_when": [
+        {
+          "answer": "Other",
+          "operator": "equals",
+          "question": "Q-1750334310662"
+        }
+      ],
+      "answer_option": [
+        {
+          "value": "Business Men"
+        },
+        {
+          "value": "Entrepreneur"
+        },
+        {
+          "value": "Home Maker"
+        },
+        {
+          "value": "Retired Person"
+        },
+        {
+          "value": "N/A"
+        }
+      ]
+    },
+    {
+      "id": "5ba4226e-1c54-4244-ac5b-ae255f3da4fe",
+      "text": "Provide Links to patient reports, if any",
+      "type": "url",
+      "link_id": "Q-1750333852096"
+    },
+    {
+      "id": "87c4da64-52e4-484e-b6aa-84593d3cdf0e",
+      "text": "Patient shared which all information to calculate BMI",
+      "type": "choice",
+      "link_id": "Q-1750335431719",
+      "repeats": true,
+      "answer_option": [
+        {
+          "value": "Height"
+        },
+        {
+          "value": "Weight"
+        },
+        {
+          "value": "N/A"
+        }
+      ]
+    },
+    {
+      "id": "f2639091-128d-400d-a6ac-f6168961bdf6",
+      "text": "Preferred next consultation date ",
+      "type": "date",
+      "link_id": "Q-1750334093849",
+      "required": true
+    },
+    {
+      "id": "f23bbd91-4835-422d-9d65-55e5d19a9645",
+      "text": "Preferred next consultation time",
+      "type": "time",
+      "link_id": "Q-1750333933325",
+      "required": true
+    },
+    {
+      "id": "cbdc3187-d1b7-4bfb-8ca5-edd4f928e90c",
+      "text": "Remarks if any",
+      "type": "text",
+      "link_id": "Q-1750335593759"
+    },
+    {
+      "id": "6e7f8bfd-389b-4852-9990-c2c5061e12af",
+      "text": "How did the patient rate the services",
+      "type": "integer",
+      "link_id": "Q-1750335635057"
+    },
+    {
+      "id": "ba2ad77a-5165-4a01-94ec-2dd3953e5c8d",
+      "text": "Why its rated less or equal to 8",
+      "type": "text",
+      "link_id": "Q-1750335681228",
+      "enable_when": [
+        {
+          "answer": 0,
+          "operator": "less_or_equals",
+          "question": "Q-1750335635057"
+        }
+      ]
+    },
+    {
+      "id": "1016de1b-3472-418f-8726-dda4d2ac704e",
+      "text": "Why its rated greater than 8",
+      "type": "text",
+      "link_id": "Q-1750335770581",
+      "enable_when": [
+        {
+          "answer": 8,
+          "operator": "greater",
+          "question": "Q-1750335635057"
+        }
+      ]
+    },
+    {
+      "id": "23dc46b6-66e6-4971-8fef-e91c020245de",
+      "text": "Display",
+      "type": "display",
+      "link_id": "Q-1750333628672",
+      "description": "Note: All information is confidential"
+    },
+    {
+      "id": "4a471d97-4928-4261-9362-98dde0d2a8f3",
+      "text": "Below are the clinical record of the patient",
+      "type": "text",
+      "link_id": "Q-1750336197774",
+      "read_only": true
+    },
+    {
+      "id": "f473430a-3f91-41c3-a3aa-5f712c8614ea",
+      "text": "Structured question of the clinical Record",
+      "type": "group",
+      "link_id": "Q-1750337803684",
+      "questions": [
+        {
+          "id": "22334d2b-db40-4b04-9fdb-4e4d0d4a7d3b",
+          "text": "Allergies",
+          "type": "structured",
+          "link_id": "Q-1750337836896",
+          "structured_type": "allergy_intolerance"
+        },
+        {
+          "id": "311b0631-5d29-4e9a-97b8-3ccf740f6cbc",
+          "text": "Symptom",
+          "type": "structured",
+          "link_id": "Q-1750338077262",
+          "structured_type": "symptom"
+        },
+        {
+          "id": "82ab8c0b-f6cd-42ce-9f0a-3348dc1ff042",
+          "text": "Diagnosis",
+          "type": "structured",
+          "link_id": "Q-1750338100618",
+          "structured_type": "diagnosis"
+        },
+        {
+          "id": "6082f402-573a-4ead-8e30-1e5cec563463",
+          "text": "Encounter",
+          "type": "structured",
+          "link_id": "Q-1750338117891",
+          "structured_type": "encounter"
+        },
+        {
+          "id": "8fb09a25-faa7-4c1c-a9c8-96c8ee3a0843",
+          "text": "Time of death",
+          "type": "structured",
+          "link_id": "Q-1750338131186",
+          "structured_type": "time_of_death"
+        },
+        {
+          "id": "347774ed-036b-417b-b37f-7984d86a7c0f",
+          "text": "Appointment",
+          "type": "structured",
+          "link_id": "Q-1750338152209",
+          "structured_type": "appointment"
+        },
+        {
+          "id": "7c4a7eaa-0313-45f6-8aa1-2f721210ed05",
+          "text": "Files",
+          "type": "structured",
+          "link_id": "Q-1750338173626",
+          "structured_type": "files"
+        }
+      ]
+    },
+    {
+      "id": "e622ec12-ee9f-4427-9d6f-f931bf38edc9",
+      "text": "what is the patients temperature (Normal 37 degree C)",
+      "type": "decimal",
+      "unit": {
+        "code": "Cel",
+        "system": "http://unitsofmeasure.org",
+        "display": "degree Celsius"
+      },
+      "link_id": "Q-1750338220704"
+    },
+    {
+      "id": "0b38fa2c-8669-4501-bc56-6e81b5441836",
+      "text": "Reason for lower temperature (  <37 )",
+      "type": "text",
+      "link_id": "Q-1750338359523",
+      "enable_when": [
+        {
+          "answer": 37,
+          "operator": "less",
+          "question": "Q-1750338220704"
+        }
+      ]
+    },
+    {
+      "id": "c2ffbd75-2ffa-4b39-a26a-ca1c36aa703b",
+      "text": "Reason for higher temperature (38)",
+      "type": "string",
+      "link_id": "Q-1750338361995",
+      "enable_when": [
+        {
+          "answer": 38,
+          "operator": "greater_or_equals",
+          "question": "Q-1750338220704"
+        }
+      ]
+    }
+  ],
+  "status": "draft",
+  "subject_type": "encounter",
+  "version": "",
+  "tags": []
+}
