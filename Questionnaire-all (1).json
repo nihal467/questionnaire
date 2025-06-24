@@ -1,0 +1,74 @@
+{
+  "title": "All Structure Question",
+  "slug": "Questionnaire-all",
+  "description": "",
+  "questions": [
+    {
+      "id": "5e331223-6ffa-471f-8e36-16efb679c3d0",
+      "text": "Structure - Allergy Intolerance",
+      "type": "structured",
+      "link_id": "Q-1750746728166",
+      "structured_type": "allergy_intolerance"
+    },
+    {
+      "id": "a1b28311-173e-4be2-a857-c70f02d0e75e",
+      "text": "Structure - Medication Request",
+      "type": "structured",
+      "link_id": "Q-1750746767847",
+      "structured_type": "medication_request"
+    },
+    {
+      "id": "38a48f0f-8a74-485e-a5aa-4f4fd530442b",
+      "text": "Structure - medication statement",
+      "type": "structured",
+      "link_id": "Q-1750746783896",
+      "structured_type": "medication_statement"
+    },
+    {
+      "id": "ab57f16a-2b8f-4532-b546-1c117fd83b70",
+      "text": "Structure - Symptom",
+      "type": "structured",
+      "link_id": "Q-1750746874926",
+      "structured_type": "symptom"
+    },
+    {
+      "id": "679eb979-7447-43e1-bfda-cf2365474929",
+      "text": "Structure - Diagnosis",
+      "type": "structured",
+      "link_id": "Q-1750746890168",
+      "structured_type": "diagnosis"
+    },
+    {
+      "id": "075b97c0-c335-4c04-8587-836797c93110",
+      "text": "Structure - Encounter",
+      "type": "structured",
+      "link_id": "Q-1750746910627",
+      "structured_type": "encounter"
+    },
+    {
+      "id": "63379181-e721-44ca-881c-c8e0b639b28d",
+      "text": "Structure - Time of Death",
+      "type": "structured",
+      "link_id": "Q-1750746931185",
+      "structured_type": "time_of_death"
+    },
+    {
+      "id": "e7238de1-1490-4b25-8e32-b0ece55081ab",
+      "text": "Structure - Appointment ",
+      "type": "structured",
+      "link_id": "Q-1750746961216",
+      "structured_type": "appointment"
+    },
+    {
+      "id": "00f1a761-e0e9-4089-94a0-d7e67d4b9d9f",
+      "text": "Structure - Files",
+      "type": "structured",
+      "link_id": "Q-1750746987135",
+      "structured_type": "files"
+    }
+  ],
+  "status": "active",
+  "subject_type": "encounter",
+  "version": "",
+  "tags": []
+}
